@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.main {
+  position: relative;
+  overflow: hidden;
+  width: 900px;
+  height: 300px;
+  max-width: 800px;
+  /* background-color: yellow; */
+  margin: 100px auto 25px auto;
+
+  transition: all 0.2s linear;
+}
+
+.item {
+  position: absolute;
+  font-family: sans-serif;
+  background-color: #087f5b;
+  /* overflow: hidden; */
+  top: 0;
+  transform: translateX(-50%);
+  width: 85%;
+  height: 75%;
+  border-radius: 6px;
+  color: white;
+  /* margin: 100px auto 30px auto; Top-Right-Bottom-Left */
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  transition: all 0.2s linear;
+  margin: 50px;
+  /* padding: 50px; */
+}
+
+.item--1 {
+  transform: translateX(0%);
+}
+.item--2 {
+  transform: translateX(120%);
+}
+.item--3 {
+  transform: translateX(240%);
+}
+
+.person_photo {
+  position: fixed;
+  height: 250px;
+  border-radius: 6px;
+  /*   border-radius: 60px; */
+  /*   padding-left: 50px; */
+  margin-left: 40px;
+  box-shadow: 0px 0px 35px 8px rgba(0, 0, 0, 0.2);
+  /* transform: scale(1.5); */
+}
+
+.text_div {
+  padding: 20px;
+  padding-left: 250px;
+}
+
+.main_text {
+  line-height: 1.5;
+}
+
+.name {
+  padding-top: 10px;
+  margin-bottom: 0px;
+}
+
+.job {
+  margin-top: 0px;
+}
+
+.name,
+.job {
+  font-size: 14px;
+}
+
+.arrow {
+  /*   height: 100px; */
+  width: 35px;
+  /*   stroke: black; */
+  fill: #087f5b;
+  background-color: white;
+  border-radius: 100%;
+  box-shadow: 0px 0px 35px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  top: 45%;
+  /* transform: translate(1000 150); */
+}
+
+.right {
+  left: 91.5%;
+  transform: translateX(-50%);
+}
+
+.left {
+  right: 94%;
+  transform: translateX(50%);
+}
+
+.circles {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.circle {
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  border-radius: 100%;
+  margin-top: 0;
+  border: 3px solid #087f5b;
+  cursor: pointer;
+}
+
+.circle.active {
+  background-color: #087f5b;
+}
