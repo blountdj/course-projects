@@ -2,12 +2,14 @@
   margin: 0;
   padding: 0;
   box-size: border-box;
+  /* transition: all 0.3s linear 0s; */
 }
 
 body {
   font-family: "Inter", sans-serif;
   color: #343a40;
   line-height: 1;
+  /* transition: all 0.3s linear 0s; */
 }
 
 .accordion {
@@ -22,38 +24,43 @@ body {
   box-shadow: 0px 0px 35px 8px rgba(0, 0, 0, 0.1);
   padding: 24px;
 
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-template-row: auto auto;
+  display: flex;
+  flex-direction: column;
   column-gap: 24px;
-  row-gap: 32px;
+  /* row-gap: 32px; */
   align-items: center;
+  justify-items: center;
   border-top: 5px solid white;
+  transition: all 0.5s linear;
+}
+
+.item_header {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 60px 1fr 15px;
 }
 
 .open {
   border-top: 5px solid #087f5b;
 }
 
-.open .hidden-box {
-  display: block;
-}
-
 .open .number,
 .open .text {
   color: #087f5b;
+  transition: all 0.5s linear;
 }
 
 .hidden-box {
-  grid-column: 2;
-  display: none;
+  /* padding-top: 50px; */
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.5s linear;
 }
 
 .number,
 .text {
   font-size: 24px;
   font-weight: 500;
-  /*   color: #087f5b; */
 }
 
 .number {
